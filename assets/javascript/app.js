@@ -6,40 +6,85 @@
 //      2. IF time runs out before all questions are answered, game ends.
 // 
 // 3. Display results.
-//      1. Win/Lose Results.
+//      1. End Results.
 //      2. Correct Answers.
 //      3. Incorrect Answers.
 //      4. Unanswered.
 
 $(document).ready(function() {
 
-    var number = 120;
-    var timerId;
-    var correctCount = 0;
-    var incorrectCount = 0;
+    var number = 60;
+    var intervalId;
+    var rightCount = 0;
+    var wrongCount = 0;
     var unanswered = 0;
 
     function run() {
-        intervalId = setIterval(decrement, 1000);
+        intervalId = setInterval(decrement, 1000);
     }
 
-    function stop() {
+    $(window).on("load", hide);
+
+    $('#start').on('click', function(){
+        $(this).hide();
+        show();
+        run();
+    });
+
+    $('#done').on('click', function(){
+        $('#start').hide();
+        hide();
+        results();
+        stop();
+    });
+
+    function results(){
+        var finish = $('<h2>').html('You Finished!');
+        var correct = $('<p>').html('Correct: ' + rightCount);
+        var incorrect = $('<p>').html('Incorrect: ' + wrongCount);
+        var noAnswer = $('<p>').html('Unanswered: ' + unanswered);
+        var newDiv = $('<div class="timer text-center" id="summary">');
+        newDiv.append(finish);
+        newDiv.append(correct);
+        newDiv.append(incorrect);
+        newDiv.append(noAnswer);
+        $('.top').append(newDiv);
+    }
+
+    function decrement(){
+        number--;
+
+        $("#timer").html(" " + number + " seconds");
+
+        if (number === 1) {
+            $("#timer").html(" " + number + " seconds");
+        } else if (number === 0) {
+            $('#start').hide();
+            hide();
+            rSummary();
+            stop();
+        }
+    }
+
+    function stop(){
         clearInterval(intervalId);
     }
 
-    function show() {
+    function hide(){
+        $('.form-group').hide();
+        $('#time').hide();
+        $('#done').hide();
+    }
+
+    function show(){
+        $('.form-group').show();
         $('#time').show();
+        $('#done').show();
     }
 
-    $('#start').on('click', function() {
-        
-    }
-
-    $('input[type=radio]').on("change", function() {
-        correctCount = $('input[value=right]:checked').length;
-        incorrectCount = $('input[value=wrong]:checked').length;
-        unanswered = (5-(correctCount + incorrectCount));
-    })
-
-
+    $('input[type=radio]').on("change", function(){
+        rightCount = $('input[value=right]:checked').length;
+        wrongCount = $('input[value=wrong]:checked').length;
+        unanswered = (5-(rightCount + wrongCount));
+    });
 })

@@ -8,158 +8,166 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700,700i&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type= "text/javascript" src="assets/javascript/game.js"></script>
 </head>
 
 <body>
-    <div class="top">
-        <div class="jumbotron text-center">
-            <h1>Totally Trivial Trivia!</h1>
+    <div class="container">
+        <div class="top">
+            <div class="jumbotron text-center">
+                <h1>Totally Trivial Trivia!</h1>
+            </div>
         </div>
-    
-        <div class="start-btn text-center">
-            <button type="button" class="btn btn-primary btn-lg btn-center" id="start">Start</button>
+
+        <div class="top">
+            <div class="start-btn text-center">
+                <button type="button" class="btn btn-primary btn-lg btn-center" id="start">Start</button>
+            </div>
+
+            <div class="timer text-center">
+                <h3 id="time">Time Remaining: <span id="timer"></span></h3>
+            </div>
         </div>
-    
-        <div class="timer text-center">
-            <h3 id="time">Time Remaining: <span id="timer"></span></h3>
-        </div>
-    </div>
 
-    <br>
+        <br>
 
-    <div class="quiz">
+        <div class="quiz">
 
-        <div class="q1 form-group text-center">
+            <div class="q1 form-group text-center">
 
-            <p><strong>What does "AOL" stand for?</strong></p>
-        
-            <form class="question">
-                <label class="radio-inline">
-                    <input type="radio" name="optradio" class="optradio" value="wrong">
+                <p><strong>What does "AOL" stand for?</strong></p>
+
+                <form class="question">
+                    <label class="radio-inline">
+                        <input type="radio" name="optradio" class="optradio" value="wrong">
                     All Online
-                </label>
-            
-                <label class="radio-inline">
-                    <input type="radio" name="optradio" class="optradio" value="wrong">
+                    </label>
+
+                    <label class="radio-inline">
+                        <input type="radio" name="optradio" class="optradio" value="wrong">
                     Aruba Online
-                </label>
-            
-                <label class="radio-inline">
-                    <input type="radio" name="optradio" class="optradio" value="wrong">
+                    </label>
+
+                    <label class="radio-inline">
+                        <input type="radio" name="optradio" class="optradio" value="wrong">
                     All Over Lines
-                </label>
-            
-                <label class="radio-inline">
-                    <input type="radio" name="optradio" class="optradio" value="right">
-                    American Online
-                </label>
-            </form>
+                    </label>
 
-            <p><strong>Tiger Electronics released this furry companion in 1998, that would go from speaking its native tongue to learning the user's language.</strong></p>
-        
-            <form class="question">
-                <label class="radio-inline">
-                    <input type="radio" name="optradio" class="optradio" value="wrong">
-                    Tickle Me Elmo
-                </label>
-            
-                <label class="radio-inline">
-                    <input type="radio" name="optradio" class="optradio" value="wrong">
-                    Beanie Babies
-                </label>
-            
-                <label class="radio-inline">
-                    <input type="radio" name="optradio" class="optradio" value="right">
-                    Furby
-                </label>
-            
-                <label class="radio-inline">
-                    <input type="radio" name="optradio" class="optradio" value="wrong">
-                    Pound Puppies
-                </label>
-            </form>
+                    <label class="radio-inline">
+                        <input type="radio" name="optradio" class="optradio" value="right">
+                        American Online
+                    </label>
+                </form>
 
-            <p><strong>Also known as "milk caps," this was a wildly popular game among kids during the early to mid '90s.</strong></p>
-        
-            <form class="question">
-                <label class="radio-inline">
-                    <input type="radio" name="optradio" class="optradio" value="wrong">
-                    Jacks
-                </label>
-            
-                <label class="radio-inline">
-                    <input type="radio" name="optradio" class="optradio" value="right">
-                    Pogs
-                </label>
-            
-                <label class="radio-inline">
-                    <input type="radio" name="optradio" class="optradio" value="wrong">
-                    Dominoes
-                </label>
-            
-                <label class="radio-inline">
-                    <input type="radio" name="optradio" class="optradio" value="wrong">
-                    Pick Up Sticks
-                </label>
-            </form>
+                <p><strong>Tiger Electronics released this furry companion in 1998, that would go from speaking its native tongue to learning the user's language.</strong></p>
 
-            <p><strong>Which 90s TV show features characters with the name Tommy, Zack, Kimberly, Billy, and Trini?</strong></p>
+                <form class="question">
+                    <label class="radio-inline">
+                        <input type="radio" name="optradio" class="optradio" value="wrong">
+                        Tickle Me Elmo
+                    </label>
 
-            <form class="question">
-                <label class="radio-inline">
-                    <input type="radio" name="optradio" class="optradio" value="right">
-                    Mighty Morphin Power Rangers
-                </label>
-            
-                <label class="radio-inline">
-                    <input type="radio" name="optradio" class="optradio" value="w">
-                    Beverly Hills 90210
-                </label>
-            
-                <label class="radio-inline">
-                    <input type="radio" name="optradio" class="optradio" value="wrong">
-                    Saved By The Bell
-                </label>
-            
-                <label class="radio-inline">
-                    <input type="radio" name="optradio" class="optradio" value="wrong">
-                    All That
-                </label>
-            </form>
+                    <label class="radio-inline">
+                        <input type="radio" name="optradio" class="optradio" value="wrong">
+                        Beanie Babies
+                    </label>
 
-            <p><strong>What group had the hit wonder in the 90s by the name of "Lovefool"?</strong></p>
+                    <label class="radio-inline">
+                        <input type="radio" name="optradio" class="optradio" value="right">
+                        Furby
+                    </label>
 
-            <form class="question">
-                <label class="radio-inline">
+                    <label class="radio-inline">
+                        <input type="radio" name="optradio" class="optradio" value="wrong">
+                        Pound Puppies
+                    </label>
+                </form>
+
+                <p><strong>Also known as "milk caps," this was a wildly popular game among kids during the early to mid '90s.</strong></p>
+
+                <form class="question">
+                    <label class="radio-inline">
+                        <input type="radio" name="optradio" class="optradio" value="wrong">
+                        Jacks
+                    </label>
+
+                    <label class="radio-inline">
+                        <input type="radio" name="optradio" class="optradio" value="right">
+                        Pogs
+                    </label>
+
+                    <label class="radio-inline">
+                        <input type="radio" name="optradio" class="optradio" value="wrong">
+                        Dominoes
+                    </label>
+
+                    <label class="radio-inline">
+                        <input type="radio" name="optradio" class="optradio" value="wrong">
+                        Pick Up Sticks
+                    </label>
+                </form>
+
+                <p><strong>Which 90s TV show features characters with the name Tommy, Zack, Kimberly, Billy, and Trini?</strong></p>
+
+                <form class="question">
+                    <label class="radio-inline">
+                        <input type="radio" name="optradio" class="optradio" value="right">
+                        Mighty Morphin Power Rangers
+                    </label>
+
+                    <label class="radio-inline">
+                        <input type="radio" name="optradio" class="optradio" value="w">
+                        Beverly Hills 90210
+                    </label>
+
+                    <label class="radio-inline">
+                        <input type="radio" name="optradio" class="optradio" value="wrong">
+                        Saved By The Bell
+                    </label>
+
+                    <label class="radio-inline">
+                        <input type="radio" name="optradio" class="optradio" value="wrong">
+                        All That
+                    </label>
+                </form>
+
+                <p><strong>What group had the hit wonder in the 90s by the name of "Lovefool"?</strong></p>
+
+                <form class="question">
+                    <label class="radio-inline">
                     <input type="radio" name="optradio" class="optradio" value="wrong">
-                    The Corrs
-                </label>
-            
-                <label class="radio-inline">
-                    <input type="radio" name="optradio" class="optradio" value="wrong">
-                    Ace of Base
-                </label>
-            
-                <label class="radio-inline">
-                    <input type="radio" name="optradio" class="optradio" value="wrong">
-                    Chumbawumba
-                </label>
-            
-                <label class="radio-inline">
-                    <input type="radio" name="optradio" class="optradio" value="right">
-                    The Cartigans
-                </label>
-            </form>
-        
+                        The Corrs
+                    </label>
+
+                    <label class="radio-inline">
+                        <input type="radio" name="optradio" class="optradio" value="wrong">
+                        Ace of Base
+                    </label>
+
+                    <label class="radio-inline">
+                        <input type="radio" name="optradio" class="optradio" value="wrong">
+                        Chumbawumba
+                    </label>
+
+                    <label class="radio-inline">
+                        <input type="radio" name="optradio" class="optradio" value="right">
+                        The Cartigans
+                    </label>
+                </form>
+
         </div>
 
+        </div>
+
+        <div class="top">
+            <div class="done-btn text-center">
+                <button type="button" class="btn btn-primary btn-lg btn-center" id="start">Done</button>
+            </div>
+        </div>
     </div>
     
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type= "text/javascript" src="assets/javascript/app.js"></script>
     
-
 </body>
 
 </html>
