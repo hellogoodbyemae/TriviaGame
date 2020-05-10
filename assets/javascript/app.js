@@ -23,11 +23,6 @@ $(document).ready(function() {
         intervalId = setIterval(decrement, 1000);
     }
 
-    $('#start').on('click', function() {
-        
-    }
-
-
     function stop() {
         clearInterval(intervalId);
     }
@@ -36,5 +31,15 @@ $(document).ready(function() {
         $('#time').show();
     }
 
-    
+    $('#start').on('click', function() {
+        
+    }
+
+    $('input[type=radio]').on("change", function() {
+        correctCount = $('input[value=right]:checked').length;
+        incorrectCount = $('input[value=wrong]:checked').length;
+        unanswered = (5-(correctCount + incorrectCount));
+    })
+
+
 })
