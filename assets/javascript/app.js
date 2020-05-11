@@ -5,7 +5,7 @@
 //      1. IF all questions are answered before time runs out, game ends.
 //      2. IF time runs out before all questions are answered, game ends.
 // 
-// 3. Display results.
+// 3. Display results. Results fill screen and game disappears.
 //      1. End Results.
 //      2. Correct Answers.
 //      3. Incorrect Answers.
@@ -13,7 +13,7 @@
 
 $(document).ready(function() {
 
-    var number = 60;
+    var number = 30;
     var intervalId;
     var rightCount = 0;
     var wrongCount = 0;
@@ -48,7 +48,7 @@ $(document).ready(function() {
         newDiv.append(correct);
         newDiv.append(incorrect);
         newDiv.append(noAnswer);
-        $('.top').append(newDiv);
+        $('.top:nth(2)').append(newDiv);
     }
 
     function decrement(){
@@ -58,10 +58,11 @@ $(document).ready(function() {
 
         if (number === 1) {
             $("#timer").html(" " + number + " seconds");
-        } else if (number === 0) {
+        }
+        else if (number === 0) {
             $('#start').hide();
             hide();
-            rSummary();
+            results();
             stop();
         }
     }
@@ -77,7 +78,7 @@ $(document).ready(function() {
     }
 
     function show(){
-        $('.form-group').show();
+        $('.q1').show();
         $('#time').show();
         $('#done').show();
     }
